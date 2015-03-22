@@ -1,0 +1,24 @@
+Comparsion of five dimensionality reduction algorithms in face
+classification and reconstruction. The five algorithms are: PCA, PCA-L1,
+2DPCA, 2DPCA-L1, 2DPCAL1-S. Classifier is chosen to be Nearest Neighbor(NN).
+
+--Reference--
+Haixian Wang and Jing Wang, ¡°2DPCA with L1-norm for
+simultaneously robust and sparse modelling,¡± Neural Networks, vol.
+46, no. 0, pp. 190¨C198, 2013.
+
+--Usage-- 
+1. Download Feret and AR face database from the web. 
+2. Load them in Matlab. The data format should be height*width*nSub.
+All images should be listed in original order. Resize images if
+necessary. 
+3. Run demo_classification.m to do classification. 
+4. Run demo_add_noise.m, then run demo_reconstruction.m to do
+reconstruction.
+
+--Contact information-- 
+Jing Wang
+wangjing0@seu.edu.cn 
+yuzhounh@163.com
+
+2013-6-15 20:17:43
