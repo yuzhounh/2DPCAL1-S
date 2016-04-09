@@ -1,3 +1,6 @@
+2DPCA with L1-norm for simultaneously robust and sparse modelling
+Copyright (C) 2013 Jing Wang
+
 Comparsion of five dimensionality reduction algorithms in face
 classification and reconstruction. The five algorithms are: PCA, PCA-L1,
 2DPCA, 2DPCA-L1, 2DPCAL1-S. Classifier is chosen to be Nearest Neighbor(NN).
