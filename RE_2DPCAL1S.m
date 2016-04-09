@@ -6,7 +6,7 @@ function err=RE_2DPCAL1S(x_noise,ix_noise,kSet,lam,eta,ini_opt)
 % only count the differences between normal faces and their reconstruction
 
 %     2DPCA with L1-norm for simultaneously robust and sparse modelling
-%     Copyright (C) <2013>  <Jing Wang>
+%     Copyright (C) 2013 Jing Wang
 % 
 %     This program is free software: you can redistribute it and/or modify
 %     it under the terms of the GNU General Public License as published by

@@ -2,7 +2,7 @@ function err=RE_2DPCA(x_noise,ix_noise,kSet)
 % calculating the reconstruction error by 2DPCA-L1
 
 %     2DPCA with L1-norm for simultaneously robust and sparse modelling
-%     Copyright (C) <2013>  <Jing Wang>
+%     Copyright (C) 2013 Jing Wang
 % 
 %     This program is free software: you can redistribute it and/or modify
 %     it under the terms of the GNU General Public License as published by
