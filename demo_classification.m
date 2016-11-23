@@ -60,7 +60,7 @@ acc_2dpca=Classify_2DPCA(x_train,x_test,label_train,label_test);
 acc_2dpcal1=Classify_2DPCAL1(x_train,x_test,label_train,label_test);
 acc_2dpcal1s=Classify_2DPCAL1S(x_train,x_test,label_train,label_test);
 
-save('demo_classify_AR','acc_pca','acc_pcal1','acc_2dpca','acc_2dpcal1',...
+save(sprintf('demo_classify_%s',face_name),'acc_pca','acc_pcal1','acc_2dpca','acc_2dpcal1',...
     'acc_2dpcal1s');
 
 %% plot
@@ -77,5 +77,5 @@ set(gcf,'Position',[pos(1),pos(2),pos(3)/scale,pos(4)/scale]);
 legend('PCA','PCA-L1','2DPCA','2DPCA-L1','2DPCAL1-S','location','Southeast');
 xlabel('Number of extracted basis vectors');
 ylabel('Classification accuracy');
-saveas(gcf,'demo_classify_AR','epsc2');
-saveas(gcf,'demo_classify_AR');
+saveas(gcf,sprintf('demo_classify_%s',face_name),'epsc2');
+saveas(gcf,sprintf('demo_classify_%s',face_name));
