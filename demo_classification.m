@@ -18,7 +18,8 @@
 %     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 clear,clc;
-load AR.mat;
+face_name='Feret'; % AR, Feret
+load(sprintf('%s.mat',face_name));
 
 %% preprocess
 % separate samples, display, substract the mean, and reshape
