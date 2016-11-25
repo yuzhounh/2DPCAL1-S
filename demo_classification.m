@@ -18,7 +18,7 @@
 %     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 clear,clc;
-face_name='Feret'; % AR, Feret
+face_name='AR'; % AR, Feret
 load(sprintf('%s.mat',face_name));
 
 %% preprocess
