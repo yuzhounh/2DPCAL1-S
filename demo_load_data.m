@@ -25,6 +25,11 @@ for i=1:15 % 15 subjects
         yale(:,:,j,i)=imread(sprintf('yalefaces/%02d/s%d.bmp',i,j));
     end
 end
+[height,width,nImg,nSub]=size(yale); % size of the 4D data
+
+% show all images
+figure;
+montage(reshape(yale,[height,width,1,nImg*nSub]),'DisplayRange',[],'size',[nSub,nImg]);
 
 % show the first image of each subject
 figure;
@@ -34,6 +39,6 @@ montage(yale(:,:,1,:),'DisplayRange',[]);
 figure;
 montage(reshape(yale(:,:,:,1),100,100,1,11),'DisplayRange',[]); 
 
-% maybe in 3D data format
-[height,width,nImage,nSub]=size(yale);
-yale=reshape(yale,[height,width,nImage*nSub]);
+% transform into 3D format
+yale=reshape(yale,[height,width,nImg*nSub]);
+label=kron([1:nSub]',ones(nImg,1)); % labels
