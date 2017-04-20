@@ -40,5 +40,7 @@ figure;
 montage(reshape(yale(:,:,:,1),100,100,1,11),'DisplayRange',[]); 
 
 % transform into 3D format
-yale=reshape(yale,[height,width,nImg*nSub]);
+x=reshape(yale,[height,width,nImg*nSub]);
 label=kron([1:nSub]',ones(nImg,1)); % labels
+data_size=[height,width,nImg,nSub];
+save('Yale.mat','x','label','data_size');
