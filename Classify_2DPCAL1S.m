@@ -23,7 +23,7 @@ n_test=length(label_test);
 
 % tuning parameters
 lam=1;
-eta=1e3;
+eta=1e-3;
 
 W=PCA2DL1S(x_train,lam,eta);
 nComp=size(W,2);
