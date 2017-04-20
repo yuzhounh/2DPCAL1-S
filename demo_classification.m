@@ -1,5 +1,5 @@
-% Classify on AR data by randomly selecting 10% subjects for testing and 
-% using the remaining subjects for training. 
+% Classify on AR data with natural occlusions, using the unoccluded images
+% as training set and the occluded images as testing set
 
 %     2DPCA with L1-norm for simultaneously robust and sparse modelling
 %     Copyright (C) 2013 Jing Wang
@@ -25,10 +25,9 @@ load(sprintf('%s.mat',face_name));
 % separate samples, display, substract the mean, and reshape
 n=size(x,3); % number of samples
 
-rng(0);
-ix=randperm(n); % randomly separate the subjects
-ix_test=ix(1:n/10); % 10% subjects for testing
-ix_train=setdiff([1:n],ix_test); % the remaining subject for training
+ix_train=repmat([1:13:n]',1,7)+repmat([0:6],240,1);
+ix_train=reshape(ix_train',numel(ix_train),1);
+ix_test=setdiff([1:n]',ix_train);
 
 n_train=length(ix_train);
 n_test=length(ix_test);
@@ -36,14 +35,14 @@ n_test=length(ix_test);
 x_train=x(:,:,ix_train);
 x_test=x(:,:,ix_test);
 
-label_train=label(ix_train);
-label_test=label(ix_test);
+label_train=kron([1:120]',ones(14,1));
+label_test=kron([1:120]',ones(12,1));
 
-% check data
-figure;
-montage(reshape(x_train,50,40,1,n_train),'DisplayRange',[]);
-figure;
-montage(reshape(x_test,50,40,1,n_test),'DisplayRange',[]);
+% % check data
+% figure;
+% montage(reshape(x_train,50,40,1,1680),'DisplayRange',[]);
+% figure;
+% montage(reshape(x_test,50,40,1,1440),'DisplayRange',[]);
 
 % substract the mean
 x_train_mean=mean(x_train,3);
