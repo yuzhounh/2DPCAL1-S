@@ -1,5 +1,5 @@
-% Classify on AR data with natural occlusions, using the unoccluded images
-% as training set and the occluded images as testing set
+% Classify on AR data by randomly selecting 10% subjects for testing and 
+% using the remaining subjects for training. 
 
 %     2DPCA with L1-norm for simultaneously robust and sparse modelling
 %     Copyright (C) 2013 Jing Wang
