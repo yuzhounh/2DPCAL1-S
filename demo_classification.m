@@ -18,7 +18,7 @@
 %     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 clear,clc;
-face_name='AR'; % AR, Feret
+face_name='Yale'; % AR, Feret, Yale
 load(sprintf('%s.mat',face_name));
 
 %% preprocess
@@ -44,7 +44,7 @@ montage(reshape(x_train,height,width,1,n_train),'DisplayRange',[]);
 figure;
 montage(reshape(x_test,height,width,1,n_test),'DisplayRange',[]);
 
-% substract the mean
+% subtract the mean
 x_train_mean=mean(x_train,3);
 x_train=x_train-repmat(x_train_mean,[1,1,n_train]);
 x_test=x_test-repmat(x_train_mean,[1,1,n_test]);
