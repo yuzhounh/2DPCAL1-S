@@ -22,7 +22,8 @@ clear,clc,close all;
 yale=[];
 for i=1:15 % 15 subjects
     for j=1:11 % 11 images per subject
-        yale(:,:,j,i)=imread(sprintf('yalefaces/%02d/s%d.bmp',i,j));
+        tmp=imread(sprintf('yalefaces/%02d/s%d.bmp',i,j));
+        yale(:,:,j,i)=imresize(tmp,0.5);
     end
 end
 [height,width,nImg,nSub]=size(yale); % size of the 4D data
