@@ -17,7 +17,7 @@
 %     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 clear,clc,close all;
-face_name='AR'; % AR or Feret
+face_name='Yale'; % AR, Feret, Yale
 load(sprintf('%s_noise.mat',face_name));
 
 kSet=[1:30]; % the number of features extracted
