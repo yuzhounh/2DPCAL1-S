@@ -38,7 +38,7 @@ montage(yale(:,:,1,:),'DisplayRange',[]);
 
 % show all of the 11 images of the first subject
 figure;
-montage(reshape(yale(:,:,:,1),100,100,1,11),'DisplayRange',[]); 
+montage(reshape(yale(:,:,:,1),height,width,1,11),'DisplayRange',[]); 
 
 % transform into 3D format
 x=reshape(yale,[height,width,nImg*nSub]);
