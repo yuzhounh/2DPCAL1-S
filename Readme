@@ -6,8 +6,8 @@ classification and reconstruction. The five algorithms are: PCA, PCA-L1,
 2DPCA, 2DPCA-L1, 2DPCAL1-S. Classifier is chosen to be Nearest Neighbor(NN).
 
 Reference:
-Haixian Wang and Jing Wang, 鈥?DPCA with L1-norm for simultaneously robust 
-and sparse modelling,鈥?Neural Networks, vol. 46, no. 0, pp. 190鈥?98, 2013.
+Haixian Wang and Jing Wang, “2DPCA with L1-norm for simultaneously robust 
+and sparse modelling,” Neural Networks, vol. 46, no. 0, pp. 190–198, 2013.
 
 Usage:
 1. Download the face databases from the web. Change 'face_name' in the 
