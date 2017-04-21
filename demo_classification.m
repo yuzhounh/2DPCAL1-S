@@ -26,7 +26,7 @@ load(sprintf('%s.mat',face_name));
 rng(0);
 [height,width,n]=size(x); % number of samples
 ix=randperm(n); % randomly separate the subjects
-ix_test=ix(1:n/10); % 10% subjects for testing
+ix_test=ix(1:floor(n/10)); % 10% subjects for testing
 ix_train=setdiff([1:n],ix_test); % the remaining subject for training
 
 n_train=length(ix_train);
