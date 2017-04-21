@@ -46,5 +46,5 @@ end
 
 figure;
 plot(kSet,err,'-o');
-title('RE_PCAL1');
+title('RE\_PCAL1');
 save('ERR_PCAL1.mat','err');
