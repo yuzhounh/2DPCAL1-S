@@ -38,11 +38,11 @@ x_test=x(:,:,ix_test);
 label_train=label(ix_train);
 label_test=label(ix_test);
 
-% display
-figure;
-montage(reshape(x_train,height,width,1,n_train),'DisplayRange',[]);
-figure;
-montage(reshape(x_test,height,width,1,n_test),'DisplayRange',[]);
+% % display
+% figure;
+% montage(reshape(x_train,height,width,1,n_train),'DisplayRange',[]);
+% figure;
+% montage(reshape(x_test,height,width,1,n_test),'DisplayRange',[]);
 
 % subtract the mean
 x_train_mean=mean(x_train,3);

@@ -18,7 +18,7 @@
 %     You should have received a copy of the GNU General Public License
 %     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-clear,clc,close all;
+clear,clc;
 face_name='Yale'; % AR, Feret, Yale
 load(sprintf('%s.mat',face_name));
 x_org=x;
